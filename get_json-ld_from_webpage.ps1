@@ -1,6 +1,9 @@
-﻿# Retrieve URI
-$uri = Read-Host -Prompt "Bitte URI angeben"
-# example: $uri = "https://www.fuw.ch/article/value-hat-den-haertetest-bestanden/"
+# Retrieve URI
+# Method 1: via user prompt 
+# $uri = Read-Host -Prompt "Bitte URI angeben" # example: $uri = "https://www.fuw.ch/article/value-hat-den-haertetest-bestanden/"
+
+# Method 2: via parameter
+param([string]$uri)
 
 # Retrieve Document
 $result = Invoke-WebRequest -Uri $uri
